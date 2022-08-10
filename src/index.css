@@ -1,13 +1,64 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.outerDiv {
+  /* justify-content: center;
+  text-align: center; */
+
+  height: auto;
+
+  color: aliceblue;
+  background-image: url("../public/assets/images/bg_b.jpg");
+}
+.a {
+  position: relative;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.432);
+  width: 500px;
+  height: auto;
+  padding: 100px;
+  transition: transform 250ms;
+}
+.form-control {
+  width: 400%;
+}
+/* FOR ERROR SHOW BELOW INPUT TYPES */
+.err {
+  color: red;
+  display: block;
+}
+.a:hover {
+  transform: translateY(-15px);
+  border-style: inset;
+  background-image: linear-gradient(
+    rgba(32, 90, 199, 0.452),
+    rgba(0, 0, 0, 0.678)
+  );
+}
+.mynav {
+  background-color: #ee43c5;
+  color: black;
+}
+.lgbtn {
+  position: relative;
+}
+.snbtn {
+  position: absolute;
+  top: 72px;
+  left: 151px;
+}
+.or_Tage {
+  position: absolute;
+  top: 76px;
+  left: 99px;
 }
