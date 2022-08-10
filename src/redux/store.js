@@ -3,10 +3,10 @@ import thunk from "redux-thunk";
 
 import RegisterReducer from "./reducers/RegisterReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
-
+import LoginReducer from "./reducers/LoginReducer";
 const rootReducer = combineReducers({
   RegisterReducer,
-
+  LoginReducer,
 });
 
 const store = legacy_createStore(

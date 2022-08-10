@@ -2,11 +2,12 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginAction from "../redux/actions/LoginAction";
 
 function Login() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -17,7 +18,9 @@ function Login() {
     console.log(data);
 
     dispatch(LoginAction(data));
+
     reset();
+    navigate("/service");
   };
   return (
     <>

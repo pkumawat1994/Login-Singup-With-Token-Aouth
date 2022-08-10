@@ -20,6 +20,7 @@ export const RegisterAction = (data) => {
         dispatch({ type: POST_REGISTER, payload: res.data });
       })
       .then((resp) => localStorage.setItem("user", JSON.stringify(resp)))
+
       .catch((error) => console.log(console.error));
   };
 

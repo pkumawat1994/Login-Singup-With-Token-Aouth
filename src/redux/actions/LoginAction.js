@@ -1,4 +1,6 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 import { POST_LOGIN } from "./types";
 
 const LoginAction = (data) => {
@@ -13,12 +15,12 @@ const LoginAction = (data) => {
     return axios
       .post("https://react-rails-api-demo.herokuapp.com/api/v1/signin", body)
       .then((res) => {
-        console.log(res.data);
-        localStorage.setItem("user", res.data);
-
-        return { type: POST_LOGIN, payload: res.data };
+        localStorage.setItem("user", JSON.stringify(res.data));
+        dispatch({ type: POST_LOGIN, payload: res.data });
       })
-      .catch((error) => console.log(error));
+   
+
+      .catch((error) => console.log(console.error));
   };
 };
 export default LoginAction;
